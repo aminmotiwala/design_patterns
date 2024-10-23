@@ -1,4 +1,7 @@
 import Patterns.Builder.Student;
+import Patterns.Factory.AnimalFactory;
+import Patterns.Factory.Cat;
+import Patterns.Factory.Cow;
 import Patterns.Singleton.*;
 
 public class Main {
@@ -29,6 +32,14 @@ public class Main {
         Student aminStudent = new Student.StudentBuilder(123).setFirstName("Amin").setLastName("Motiwala")
                 .setGrade("A").build();
         System.out.println(aminStudent.toString());
+
+        //Calling factory pattern
+        System.out.println("********* Factory Pattern *********");
+        Cat cat = new Cat();
+        Cow cow = new Cow();
+        AnimalFactory.registerAnimal("cat", cat);
+        AnimalFactory.registerAnimal("cow", cow);
+        System.out.println(AnimalFactory.getAnimal("cow").speak());
 
     }
 }
