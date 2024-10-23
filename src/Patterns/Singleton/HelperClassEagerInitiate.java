@@ -1,4 +1,4 @@
-package Singleton;
+package Patterns.Singleton;
 
 import Interfaces.PatternImplementation;
 
@@ -19,7 +19,7 @@ public class HelperClassEagerInitiate implements PatternImplementation {
     }
 
     public void printMe(){
-        System.out.println("Singleton Eager Helper Initialization");
+        System.out.println("Patterns.Singleton Eager Helper Initialization");
     }
 
     private static class Initiater {

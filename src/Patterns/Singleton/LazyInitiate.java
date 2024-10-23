@@ -1,4 +1,4 @@
-package Singleton;
+package Patterns.Singleton;
 
 import Interfaces.PatternImplementation;
 import java.util.Objects;
@@ -27,6 +27,6 @@ public class LazyInitiate implements PatternImplementation {
 
     @Override
     public void printMe() {
-        System.out.println("Singleton Lazy Initialize");
+        System.out.println("Patterns.Singleton Lazy Initialize");
     }
 }

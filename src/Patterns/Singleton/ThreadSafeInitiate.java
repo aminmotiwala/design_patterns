@@ -1,4 +1,4 @@
-package Singleton;
+package Patterns.Singleton;
 
 import Interfaces.PatternImplementation;
 import java.util.Objects;

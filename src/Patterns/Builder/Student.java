@@ -1,7 +1,7 @@
-package Builder;
+package Patterns.Builder;
 
 /**
- * Builder pattern helps when there are a lot of properties and we need to set some at time of creation
+ * Patterns.Builder pattern helps when there are a lot of properties and we need to set some at time of creation
  * depending on the need, either we create constructors with different combinations or we implement
  * builder pattern.
  *

@@ -1,10 +1,10 @@
-import Builder.Student;
-import Singleton.*;
+import Patterns.Builder.Student;
+import Patterns.Singleton.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        //Singleton Eager Initialization
+        //Patterns.Singleton Eager Initialization
         EagerInitiate eagerInitiate = EagerInitiate.getInstance();
         eagerInitiate.printMe();
 
@@ -25,7 +25,7 @@ public class Main {
         helperClassEagerInitiate.printMe();
 
         //Calling builder pattern
-        System.out.println("********* Builder Pattern *********");
+        System.out.println("********* Patterns.Builder Pattern *********");
         Student aminStudent = new Student.StudentBuilder(123).setFirstName("Amin").setLastName("Motiwala")
                 .setGrade("A").build();
         System.out.println(aminStudent.toString());
