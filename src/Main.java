@@ -2,6 +2,8 @@ import Patterns.Builder.Student;
 import Patterns.Factory.AnimalFactory;
 import Patterns.Factory.Cat;
 import Patterns.Factory.Cow;
+import Patterns.Observer.Subscriber;
+import Patterns.Observer.YoutubeChannel;
 import Patterns.Singleton.*;
 
 public class Main {
@@ -40,6 +42,20 @@ public class Main {
         AnimalFactory.registerAnimal("cat", cat);
         AnimalFactory.registerAnimal("cow", cow);
         System.out.println(AnimalFactory.getAnimal("cow").speak());
+
+        //Calling factory pattern
+        System.out.println("********* Observer Pattern *********");
+        YoutubeChannel disney = new YoutubeChannel("Disney");
+        Subscriber amin = new Subscriber("Amin");
+        disney.subscribe(amin);
+
+        Subscriber ali =  new Subscriber("Ali");
+        disney.subscribe(ali);
+        disney.notifySubscribers("Hi Channel is live");
+
+        disney.unSubscribe(ali);
+        disney.notifySubscribers("Hi Channel is offline");
+
 
     }
 }
