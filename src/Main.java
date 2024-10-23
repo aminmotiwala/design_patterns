@@ -1,3 +1,4 @@
+import Builder.Student;
 import Singleton.*;
 
 public class Main {
@@ -23,6 +24,11 @@ public class Main {
         HelperClassEagerInitiate helperClassEagerInitiate = HelperClassEagerInitiate.getInstance();
         helperClassEagerInitiate.printMe();
 
+        //Calling builder pattern
+        System.out.println("********* Builder Pattern *********");
+        Student aminStudent = new Student.StudentBuilder(123).setFirstName("Amin").setLastName("Motiwala")
+                .setGrade("A").build();
+        System.out.println(aminStudent.toString());
 
     }
 }
